@@ -34,7 +34,7 @@ const TaskCreationModal = ({ isOpen, onClose, onSubmit, initialData = {} }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="absolute inset-0  bg-opacity-30 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-opacity-30 backdrop-blur-sm"></div>
       
       <div className="bg-white rounded-lg shadow-2xl w-full max-w-2xl max-h-screen overflow-y-auto relative">
         <div className="sticky top-0 z-10 flex justify-between items-center p-4 border-b bg-gradient-to-r from-blue-50 to-indigo-50">
@@ -73,7 +73,7 @@ const TaskCreationModal = ({ isOpen, onClose, onSubmit, initialData = {} }) => {
               name="description"
               value={taskData.description}
               onChange={handleChange}
-              className="w-full p-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-300 focus:border-blue-500 transition-shadow"
+              className="w-full p-1 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-blue-300 focus:border-blue-500 transition-shadow"
               rows="3"
               placeholder="Task details..."
             />
@@ -91,7 +91,7 @@ const TaskCreationModal = ({ isOpen, onClose, onSubmit, initialData = {} }) => {
                   name="dueDate"
                   value={taskData.dueDate}
                   onChange={handleChange}
-                  className="w-full p-1 pl-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-300 focus:border-indigo-500 transition-shadow"
+                  className="w-full p-1 pl-10 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-300 focus:border-indigo-500 transition-shadow"
                 />
                 <Calendar size={16} className="absolute left-3 top-1.5 text-gray-400" />
               </div>
@@ -106,7 +106,7 @@ const TaskCreationModal = ({ isOpen, onClose, onSubmit, initialData = {} }) => {
                   name="estimatedHours"
                   value={taskData.estimatedHours}
                   onChange={handleChange}
-                  className="w-full p-1 pl-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-300 focus:border-purple-500 transition-shadow"
+                  className="w-full p-1 pl-10 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-purple-300 focus:border-purple-500 transition-shadow"
                   placeholder="0"
                   min="0"
                   step="0.5"
@@ -126,7 +126,7 @@ const TaskCreationModal = ({ isOpen, onClose, onSubmit, initialData = {} }) => {
                 name="category"
                 value={taskData.category}
                 onChange={handleChange}
-                className="w-full p-1 pl-10 border border-gray-300 rounded-md appearance-none focus:ring-2 focus:ring-green-300 focus:border-green-500 transition-shadow"
+                className="w-full p-1 pl-10 border-2 border-gray-300 rounded-md appearance-none focus:ring-2 focus:ring-green-300 focus:border-green-500 transition-shadow"
               >
                 <option value="">Select Category</option>
                 {CATEGORY_OPTIONS.map(cat => (
@@ -154,7 +154,7 @@ const TaskCreationModal = ({ isOpen, onClose, onSubmit, initialData = {} }) => {
                   );
                   setTaskData(prev => ({ ...prev, assignedTo: value }));
                 }}
-                className="w-full p-1 pl-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-300 focus:border-orange-500 transition-shadow"
+                className="w-full p-1 pl-10 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-orange-300 focus:border-orange-500 transition-shadow"
                 multiple
               >
                 {EMPLOYEES.map(emp => (
